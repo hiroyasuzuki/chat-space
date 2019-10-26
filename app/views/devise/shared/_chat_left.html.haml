@@ -9,13 +9,10 @@
         =link_to edit_user_path(current_user) do
           = fa_icon 'cog', class:"left-header__box__menu__edit-user"
   .groups
-    .group-first
-      .group-first__group-name
-        SMAP
-      .group-first__latest-message
-        解散しました
-    .group-second
-      .group-second__group-name
-        ジャニーズ
-      .group-second__latest-message
-        解散しました
+    - current_user.groups.each do |group|
+      .group-first
+        = link_to '#' do
+          .group-first__group-name
+            = group.name
+          .group-first__latest-message
+            メッセージはまだありません。
