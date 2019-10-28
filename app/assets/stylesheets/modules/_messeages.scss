@@ -160,15 +160,7 @@ $color-lightblue: #38AEF0;
   display: flex;
   bottom: 0px;
   padding: 0 40px;
-}
-.input-box {
-  height: 50px;
-  width: 100%;
-  line-height:50px; 
-  margin-top: 20px;
-  background-color: #fafafa;
-  position: relative;
-  &__text {
+  &__message {
     width: 80%;
     height: 50px;
     padding-left: 10px;
@@ -177,18 +169,30 @@ $color-lightblue: #38AEF0;
     border-style: none;
     background-color: #fafafa;
   }
-  &__image {
-    font-size: 20px;
-    position: absolute;
-    right: 10px;
-    background-color: #fafafa;
+}
 
-    &__file {
+.form__mask {
+  height: 50px;
+  width: 100%;
+  line-height:50px; 
+  margin-top: 20px;
+  background-color: #fafafa;
+  position: relative;
+  &__image{
+      &__icon {
+        font-size: 20px;
+        position: absolute;
+        right: 10px;
+        background-color: #fafafa;
+      }
+      &hidden {
       display: none;
-    }
+      }
   }
 }
-.submit-btn {
+
+
+.form__submit {
   width: 100px;
   height: 50px;
   padding: 0 30px;

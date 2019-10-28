@@ -31,11 +31,11 @@
           解散しました
 
     .form
-      %form.new_message{method: "post"}
-      .input-box
-        %input.input-box__text{name: "message[content]", placeholder: "type a message", type: "text"}
-        %label.input-box__image{for: "message_image"}
-          %i.fa.fa-image
-          %input#message_image.input-box__image__file{name: "message[image]", type: "file"}
-      %input.submit-btn{name: "send", type: "submit", value: "Send"}
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__box__text', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'input-box__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        =.f.submit 'send', class: 'form__submit'
         
