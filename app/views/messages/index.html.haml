@@ -13,13 +13,13 @@
             木村              
       =link_to 'Edit', "/groups/1/edit", class: "main-header__edit-btn"   
     .messages
-        = render @messages
+      = render @messages
     .form
       = form_for [@group, @message] do |f|
-        = f.text_field :content, class: 'form__box__text', placeholder: 'type a message'
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
         .form__mask
           = f.label :image, class: 'input-box__image' do
             = fa_icon 'picture-o', class: 'icon'
             = f.file_field :image, class: 'hidden'
-        =.f.submit 'send', class: 'form__submit'
+        = f.submit 'send', class: 'form__submit'
         
