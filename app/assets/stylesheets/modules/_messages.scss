@@ -155,48 +155,39 @@ $color-lightblue: #38AEF0;
   }
 }
 .form {
+  background-color: #DDDDDD;
+  box-sizing: border-box;
   height: 90px;
-  background-color: #ddd;
-  display: flex;
-  bottom: 0px;
-  padding: 0 40px;
+  padding: 20px 50px 20px 40px;
   &__message {
-    width: 80%;
+    border: none;
+    float: left;
     height: 50px;
+    width: calc(100% - 160px);
     padding-left: 10px;
-    font-size: 16px;
-    color: #434a54;
-    border-style: none;
-    background-color: #fafafa;
   }
-}
-
-.form__mask {
-  height: 50px;
-  width: 100%;
-  line-height:50px; 
-  margin-top: 20px;
-  background-color: #fafafa;
-  position: relative;
-  &__image{
-      &__icon {
-        font-size: 20px;
-        position: absolute;
-        right: 10px;
-        background-color: #fafafa;
-      }
-      &hidden {
+  &__mask {
+    background-color: $white;
+    float: left;
+    height: 50px;
+    padding-right: 10px;
+    line-height: 50px;
+    &__image {
+      font-size: 20px;
+      line-height: 50px;
+    }
+    .hidden {
       display: none;
-      }
+    }
   }
-}
-
-
-.form__submit {
-  width: 100px;
-  height: 50px;
-  padding: 0 30px;
-  margin: 20px 0 20px 15px;
-  background-color: $color-lightblue;
-  color: $color-white;
+  &__submit {
+    background-color: $light_blue;
+    border: none;
+    color: $white;
+    float: right;
+    font-size: 16px;
+    height: 50px;
+    margin-left: 15px;
+    padding: 0 30px;
+  }
 }
