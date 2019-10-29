@@ -9,7 +9,7 @@
             Member：
             .main-header__left-box__member-list__member
             = current_user.name
-      =link_to 'Edit', "/groups/1/edit", class: "main-header__edit-btn" 
+      =link_to 'Edit', edit_group_path(@group), class: "main-header__edit-btn" 
     .messages
       = render @messages
     .form
