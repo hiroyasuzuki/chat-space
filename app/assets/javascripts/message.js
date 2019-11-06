@@ -40,7 +40,7 @@ $(function(){
     .fail(function(){
       alert('メッセージを入力してください');
     })
-    .always(function(message){
+    .always(function(){
       $('.form__submit').prop('disabled', false);
     })
   })
