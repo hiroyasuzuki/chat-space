@@ -8,7 +8,8 @@
           .main-header__left-box__member-list
             Member：
             .main-header__left-box__member-list__member
-            = current_user.name
+              - @group.group_users.each do |group_user|
+                = group_user.user.name
       =link_to 'Edit', edit_group_path(@group), class: "main-header__edit-btn" 
     .messages
       = render @messages
