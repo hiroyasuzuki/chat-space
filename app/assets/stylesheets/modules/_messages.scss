@@ -51,7 +51,7 @@ $color-lightblue: #38AEF0;
   background-color: #2f3e51;
   padding: 20px 20px 0;
   overflow: scroll;
-  
+  a{text-decoration: none;}
 }
 .group-first  {
   margin-bottom: 40px;
@@ -67,6 +67,7 @@ $color-lightblue: #38AEF0;
     text-decoration: none;
   }    
 }
+
 
 .chat-main  {
   width: calc(100vw - 300px);
